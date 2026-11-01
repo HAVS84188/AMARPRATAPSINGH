@@ -1,1 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="Professional portfolio of Amar Pratap Singh, Senior Computer Operator with experience in computer operations, data management, Microsoft Word and Excel.">
+  <meta name="keywords" content="Amar Pratap Singh, Senior Computer Operator, Computer Operator, Microsoft Excel, Microsoft Word, Data Management, Gorakhpur, Lucknow, Uttar Pradesh">
+  <meta name="author" content="Amar Pratap Singh">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- AS Gold & Navy Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230b1933' stroke='%23d9ad58' stroke-width='3'/%3E%3Ctext x='50' y='65' font-size='43' font-family='Georgia' font-weight='bold' text-anchor='middle' fill='%23f2cf7a'%3EAS%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amar Pratap Singh | Professional Portfolio">
+  <meta property="og:description" content="Senior Computer Operator | Computer Operations | Data Management">
+
+  <title>Amar Pratap Singh | Professional Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --surface: rgba(20,30,51,.78);
+  --surface-solid: #141e33;
+  --surface-hover: rgba(31,45,73,.9);
+  --text: #f3f6fc;
+  --muted: #a4b0c4;
+  --line: rgba(166,185,218,.15);
+  --accent: #8b9cff;
+  --accent-2: #69e0cf;
+  --accent-soft: rgba(139,156,255,.13);
+  --shadow: 0 24px 70px rgba(0,0,0,.24);
+  --nav: rgba(11,16,32,.85);
+  --radius: 22px;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --surface: rgba(255,255,255,.85);
+  --surface-solid: #fff;
+  --surface-hover: #fff;
+  --text: #182239;
+  --muted: #65718a;
+  --line: rgba(50,69,106,.14);
+  --accent: #5268df;
+  --accent-2: #078f82;
+  --accent-soft: rgba(82,104,223,.09);
+  --shadow: 0 20px 55px rgba(35,53,92,.10);
+  --nav: rgba(244,246,251,.85);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(ellipse at 12% 4%,rgba(92,111,231,.16),transparent 34rem),
+    radial-gradient(ellipse at 92% 34%,rgba(53,191,174,.10),transparent 30rem),
+    var(--bg);
+  color: var(--text);
+  font-family: "DM Sans",sans-serif;
+  line-height: 1.65;
+  transition: background .3s,color .3s;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+.container {
+  width: min(1120px,calc(100% - 44px));
+  margin: auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(18px);
+  background: var(--nav);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: Manrope,sans-serif;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: #0b1020;
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+  font-size: 13px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px,2.5vw,30px);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  color: var(--text);
+  background: var(--surface);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.icon-btn:hover { transform: translateY(-2px); }
+
+.menu-btn { display: none; }
+
+.hero {
+  padding: 96px 0 76px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 52px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: var(--accent-2);
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(105,224,207,.12);
+}
+
+h1,h2,h3 {
+  font-family: Manrope,sans-serif;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+}
+
+h1 {
+  font-size: clamp(42px,6.3vw,76px);
+  margin: 23px 0 16px;
+  font-weight: 800;
+}
+
+.gradient-text {
+  background: linear-gradient(105deg,var(--accent),var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-copy {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: clamp(15px,1.5vw,18px);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 19px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
+  color: #0b1020;
+  border: 0;
+  background: linear-gradient(115deg,var(--accent),var(--accent-2));
+  box-shadow: 0 10px 28px rgba(112,139,238,.2);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.hero-card {
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(145deg,var(--surface),rgba(255,255,255,.025));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.monogram {
+  width: 94px;
+  height: 94px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 23px;
+  border-radius: 28px;
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+  color: #0b1020;
+  font: 800 30px Manrope,sans-serif;
+  letter-spacing: -.08em;
+}
+
+.hero-card h2 { font-size: 20px; margin: 0 0 6px; }
+.hero-card p { margin: 0; color: var(--muted); font-size: 13px; }
+
+.mini-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 22px 0;
+}
+
+.quick-info { display: grid; gap: 13px; }
+
+.quick-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.quick-row svg { flex-shrink: 0; color: var(--accent-2); }
+
+.section { padding: 76px 0; }
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.section-kicker {
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.section h2 {
+  font-size: clamp(29px,4vw,42px);
+  margin: 9px 0 0;
+}
+
+.section-intro {
+  max-width: 490px;
+  color: var(--muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.about-card {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15px;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.point {
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+}
+
+.point strong {
+  display: block;
+  font: 700 13px Manrope,sans-serif;
+}
+
+.point span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.timeline { display: grid; gap: 15px; }
+
+.job {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 24px 27px;
+}
+
+.job-date {
+  color: var(--accent-2);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.job h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.job-company {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.job p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 11px 0 0;
+}
+
+.job-index {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 13px;
+}
+
+.skill {
+  min-height: 126px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill svg { color: var(--accent-2); }
+
+.skill span {
+  font: 700 13px Manrope,sans-serif;
+}
+
+.education-wrap { overflow: hidden; }
+
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.education-table th {
+  text-align: left;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-size: 10px;
+  background: var(--accent-soft);
+}
+
+.education-table th,
+.education-table td {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.education-table tr:last-child td { border-bottom: 0; }
+.education-table td:first-child { font-weight: 700; }
+.education-table td:not(:first-child) { color: var(--muted); }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.detail-card { padding: 26px; }
+
+.detail-card h3 {
+  font-size: 17px;
+  margin: 0 0 18px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.detail-list { display: grid; gap: 13px; }
+
+.detail-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 13px;
+}
+
+.detail-line span:first-child { color: var(--muted); }
+.detail-line strong { text-align: right; }
+
+.contact-panel {
+  padding: clamp(25px,5vw,44px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.contact-panel h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 8px 0 10px;
+}
+
+.contact-panel p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 590px;
+  font-size: 14px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 190px;
+}
+
+footer {
+  padding: 28px 0 38px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* WhatsApp Floating Button */
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 60;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 17px;
+  border-radius: 999px;
+  color: #062b20;
+  background: #38d98a;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 12px 35px rgba(18,191,113,.3);
+  transition: .2s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 17px 40px rgba(18,191,113,.4);
+}
+
+/* Scroll Animations */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media(max-width:850px) {
+  .hero-grid {
+    grid-template-columns: 1fr .78fr;
+    gap: 28px;
+  }
+
+  .skills-grid { grid-template-columns: repeat(3,1fr); }
+
+  .nav-links { gap: 13px; }
+}
+
+/* Mobile */
+
+@media(max-width:680px) {
+  .container { width: min(100% - 32px,540px); }
+
+  .nav { min-height: 68px; }
+
+  .menu-btn { display: grid; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 16px;
+    right: 16px;
+    padding: 17px;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--surface-solid);
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 11px 8px;
+    font-size: 13px;
+  }
+
+  .hero { padding: 67px 0 48px; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+
+  .hero-card { max-width: 440px; }
+
+  .section { padding: 55px 0; }
+
+  .section-head { display: block; }
+
+  .section-intro { margin-top: 12px; }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 23px;
+    gap: 22px;
+  }
+
+  .job {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 21px;
+  }
+
+  .skills-grid { grid-template-columns: repeat(2,1fr); }
+
+  .two-col { grid-template-columns: 1fr; }
+
+  .contact-panel { grid-template-columns: 1fr; }
+
+  .contact-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-actions .btn { flex: 1; }
+
+  .education-table { min-width: 560px; }
+
+  .education-wrap { overflow-x: auto; }
+
+  .whatsapp-float {
+    right: 15px;
+    bottom: 15px;
+    padding: 12px 14px;
+  }
+}
+
+/* Reduced Motion */
+
+@media(prefers-reduced-motion:reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Print */
+
+@media print {
+  :root {
+    --bg: #fff;
+    --text: #111;
+    --muted: #444;
+    --surface: #fff;
+    --surface-solid: #fff;
+    --line: #ddd;
+    --shadow: none;
+  }
+
+  body { background: #fff; }
+
+  .topbar,
+  .whatsapp-float,
+  .hero-cta,
+  .nav-actions {
+    display: none !important;
+  }
+
+  .hero,.section { padding: 24px 0; }
+
+  .glass,.hero-card {
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="topbar">
+  <nav class="nav container" aria-label="Main navigation">
+
+    <a class="brand" href="#home">
+      <span class="brand-mark">AS</span>
+      <span>AMAR PRATAP SINGH</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme">
+
+        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+
+        </svg>
+
+      </button>
+
+      <button class="icon-btn menu-btn" id="menuToggle"
+      type="button" aria-label="Open navigation menu" aria-expanded="false">
+
+        <svg width="19" height="19" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+
+        </svg>
+
+      </button>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-grid">
+
+    <div class="reveal">
+
+      <span class="eyebrow">
+        <span class="status-dot"></span>
+        Professional Portfolio
+      </span>
+
+      <h1>
+        AMAR PRATAP
+        <br>
+        <span class="gradient-text">SINGH.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Senior Computer Operator with experience across computer operations,
+        sales service and marketing. Focused on dependable work,
+        data management and continuously improving professional skills.
+      </p>
+
+      <div class="hero-cta">
+
+        <a class="btn btn-primary" href="#experience">
+          Explore Experience ↗
+        </a>
+
+        <a class="btn btn-secondary" href="mailto:amaraps92@gmail.com">
+          Email Me
+        </a>
+
+      </div>
+
+    </div>
+
+    <aside class="hero-card reveal">
+
+      <div class="monogram">AS</div>
+
+      <h2>Professional Snapshot</h2>
+
+      <p>Senior Computer Operator · Uttar Pradesh, India</p>
+
+      <div class="mini-divider"></div>
+
+      <div class="quick-info">
+
+        <div class="quick-row">
+          ✉
+          <a href="mailto:amaraps92@gmail.com">
+            amaraps92@gmail.com
+          </a>
+        </div>
+
+        <div class="quick-row">
+          ☎
+          <a href="tel:+917388225792">
+            +91 73882 25792
+          </a>
+        </div>
+
+        <div class="quick-row">
+          📍
+          <span>Balrampur, Uttar Pradesh, India</span>
+        </div>
+
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <span class="section-kicker">Introduction</span>
+        <h2>About Me</h2>
+      </div>
+
+      <p class="section-intro">
+        A practical, growth-oriented professional who values teamwork,
+        responsibility and learning.
+      </p>
+
+    </div>
+
+    <div class="glass about-card reveal">
+
+      <p>
+        Seeking an entry-level position with a growth-oriented organization.
+        Utilizes whole resources and skills for an organization playing a
+        crucial part in the development in professional sector.
+        Willingness to learn and work to improve capabilities and skills.
+      </p>
+
+      <div class="about-points">
+
+        <div class="point">
+          <strong>Work Ethic</strong>
+          <span>Hardworking and passionate towards work</span>
+        </div>
+
+        <div class="point">
+          <strong>Teamwork</strong>
+          <span>Cooperative working approach</span>
+        </div>
+
+        <div class="point">
+          <strong>Coordination</strong>
+          <span>Management quality</span>
+        </div>
+
+        <div class="point">
+          <strong>Growth Mindset</strong>
+          <span>Willingness to learn and improve</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="section" id="experience">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <span class="section-kicker">Career Journey</span>
+        <h2>Professional Experience</h2>
+      </div>
+
+      <p class="section-intro">
+        Experience in computer operations, banking-card sales services
+        and marketing.
+      </p>
+
+    </div>
+
+    <div class="timeline">
+
+      <article class="glass job reveal">
+
+        <div class="job-date">26 JUNE 2024 — PRESENT</div>
+
+        <div>
+          <h3>
+            <span class="job-index">01</span>
+            Sr. Computer Operator
+          </h3>
+
+          <div class="job-company">
+            MS ASSOCIATES · GORAKHPUR
+          </div>
+
+          <p>Working as a Senior Computer Operator.</p>
+        </div>
+
+      </article>
+
+      <article class="glass job reveal">
+
+        <div class="job-date">1 NOV 2020 — 25 JUNE 2024</div>
+
+        <div>
+          <h3>
+            <span class="job-index">02</span>
+            Computer Operator
+          </h3>
+
+          <div class="job-company">
+            EVERGREEN ADVERTISING · LUCKNOW
+          </div>
+
+          <p>Worked as a Computer Operator.</p>
+        </div>
+
+      </article>
+
+      <article class="glass job reveal">
+
+        <div class="job-date">MARCH 2019 · 6 MONTHS</div>
+
+        <div>
+          <h3>
+            <span class="job-index">03</span>
+            BRE — Sales Service Provider for SBI Cards
+          </h3>
+
+          <div class="job-company">
+            STATE BANK OF INDIA · GORAKHPUR
+          </div>
+
+          <p>Worked as a sales service provider for SBI Cards.</p>
+        </div>
+
+      </article>
+
+      <article class="glass job reveal">
+
+        <div class="job-date">5 AUG 2019 — 25 OCT 2020</div>
+
+        <div>
+          <h3>
+            <span class="job-index">04</span>
+            Marketing Executive
+          </h3>
+
+          <div class="job-company">
+            SBICAP SECURITIES LTD
+          </div>
+
+          <p>Worked as a Marketing Executive.</p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<section class="section" id="skills">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <span class="section-kicker">What I Work With</span>
+        <h2>Core Skills</h2>
+      </div>
+
+      <p class="section-intro">
+        Computer and office productivity skills supporting
+        day-to-day operational work.
+      </p>
+
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="glass skill reveal">
+        <span>▣</span>
+        <span>Microsoft Windows</span>
+      </div>
+
+      <div class="glass skill reveal">
+        <span>▤</span>
+        <span>Microsoft Word</span>
+      </div>
+
+      <div class="glass skill reveal">
+        <span>▦</span>
+        <span>Microsoft Excel</span>
+      </div>
+
+      <div class="glass skill reveal">
+        <span>▥</span>
+        <span>Data Management</span>
+      </div>
+
+      <div class="glass skill reveal">
+        <span>▣</span>
+        <span>Computer Operations</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <span class="section-kicker">Academic Background</span>
+        <h2>Education</h2>
+      </div>
+
+      <p class="section-intro">
+        Educational qualifications and aggregate marks.
+      </p>
+
+    </div>
+
+    <div class="glass education-wrap reveal">
+
+      <table class="education-table">
+
+        <thead>
+          <tr>
+            <th>Qualification</th>
+            <th>Institution / Board</th>
+            <th>Year</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>M.A.</td>
+            <td>Dr. RMLA University</td>
+            <td>2016</td>
+            <td>49.5%</td>
+          </tr>
+
+          <tr>
+            <td>B.A.</td>
+            <td>Dr. RMLA University</td>
+            <td>2014</td>
+            <td>47%</td>
+          </tr>
+
+          <tr>
+            <td>Class XII</td>
+            <td>U.P. Board</td>
+            <td>2011</td>
+            <td>72.6%</td>
+          </tr>
+
+          <tr>
+            <td>Class X</td>
+            <td>U.P. Board</td>
+            <td>2008</td>
+            <td>42%</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS AND PERSONAL DETAILS -->
+
+<section class="section" id="highlights">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <span class="section-kicker">Beyond the Workplace</span>
+        <h2>Achievements & Personal Details</h2>
+      </div>
+
+    </div>
+
+    <div class="two-col">
+
+      <article class="glass detail-card reveal">
+
+        <h3>Achievements & Strengths</h3>
+
+        <div class="tag-list">
+
+          <span class="tag">BMIC Sports Tournament Participant</span>
+
+          <span class="tag">100m Race Prize Winner</span>
+
+          <span class="tag">Hardworking</span>
+
+          <span class="tag">Cooperative</span>
+
+          <span class="tag">Management Quality</span>
+
+          <span class="tag">Passionate Towards Work</span>
+
+        </div>
+
+      </article>
+
+      <article class="glass detail-card reveal">
+
+        <h3>Personal Information</h3>
+
+        <div class="detail-list">
+
+          <div class="detail-line">
+            <span>Father's Name</span>
+            <strong>Mr. Awdhesh Pratap Singh</strong>
+          </div>
+
+          <div class="detail-line">
+            <span>Date of Birth</span>
+            <strong>09-DEC-1992</strong>
+          </div>
+
+          <div class="detail-line">
+            <span>Languages</span>
+            <strong>Hindi, English</strong>
+          </div>
+
+          <div class="detail-line">
+            <span>Nationality</span>
+            <strong>Indian</strong>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+  <div class="container">
+
+    <div class="glass contact-panel reveal">
+
+      <div>
+
+        <span class="section-kicker">Get In Touch</span>
+
+        <h2>Let's connect professionally.</h2>
+
+        <p>
+          For professional opportunities and enquiries,
+          feel free to get in touch by email or phone.
+          Based in Balrampur, Uttar Pradesh.
+        </p>
+
+        <p style="margin-top:13px;font-size:12px">
+          VILL-SAIDEEH, POST-GAINJAHWA,
+          DISTT.-BALRAMPUR, UTTAR PRADESH,
+          PIN CODE - 271201
+        </p>
+
+      </div>
+
+      <div class="contact-actions">
+
+        <a class="btn btn-primary" href="mailto:amaraps92@gmail.com">
+          Send an Email ↗
+        </a>
+
+        <a class="btn btn-secondary" href="tel:+917388225792">
+          Call +91 73882 25792
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © <span id="year"></span>
+      Amar Pratap Singh. All rights reserved.
+    </span>
+
+    <span>Designed as a professional portfolio.</span>
+
+  </div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<a class="whatsapp-float"
+href="https://wa.me"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Connect on WhatsApp">
+
+  <svg width="20" height="20" viewBox="0 0 24 24"
+  fill="currentColor" aria-hidden="true">
+
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.5-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.24-.37a9.87 9.87 0 0 1-1.52-5.26c0-5.46 4.44-9.9 9.91-9.9a9.83 9.83 0 0 1 7.01 2.9 9.83 9.83 0 0 1 2.9 7.01c0 5.47-4.45 9.91-9.92 9.91Z"/>
+
+  </svg>
+
+  <span>Connect on WhatsApp</span>
+
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+(() => {
+
+  const root = document.documentElement;
+
+  const themeToggle = document.getElementById("themeToggle");
+
+  const themeIcon = document.getElementById("themeIcon");
+
+  const menuToggle = document.getElementById("menuToggle");
+
+  const navLinks = document.getElementById("navLinks");
+
+  // Save and restore theme
+
+  const savedTheme = localStorage.getItem("amar-portfolio-theme");
+
+  if (savedTheme === "light" || savedTheme === "dark") {
+    root.dataset.theme = savedTheme;
+  }
+
+  function updateThemeIcon() {
+
+    const isDark = root.dataset.theme === "dark";
+
+    themeIcon.innerHTML = isDark
+
+      ? '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>'
+
+      : '<path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/>';
+
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme"
+    );
+
+  }
+
+  updateThemeIcon();
+
+  // Theme toggle
+
+  themeToggle.addEventListener("click", () => {
+
+    root.dataset.theme =
+      root.dataset.theme === "dark" ? "light" : "dark";
+
+    localStorage.setItem(
+      "amar-portfolio-theme",
+      root.dataset.theme
+    );
+
+    updateThemeIcon();
+
+  });
+
+  // Mobile navigation
+
+  menuToggle.addEventListener("click", () => {
+
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("open");
+
+      menuToggle.setAttribute("aria-expanded", "false");
+
+    });
+
+  });
+
+  // Automatic copyright year
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Scroll reveal animations
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(element => {
+
+    observer.observe(element);
+
+  });
+
+})();
+
+</script>
+
+</body>
+  </html>
